@@ -2,4 +2,4 @@ language: java
 before_install:
  - chmod +x gradlew
 jdk:
-  -\jdk-8.0.272.10-hotspot
+  - jdk-8.0.272.10-hotspot
