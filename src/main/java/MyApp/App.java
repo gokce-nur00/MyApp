@@ -13,6 +13,8 @@ import java.util.Map;
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import static spark.Spark.port;
 
 
@@ -38,13 +40,13 @@ public class App {
         }
         return false;
     }
+
+
+
     public static void main(String[] args) {
 
         Logger logger = LogManager.getLogger(App.class);
-
-        int port = Integer.parseInt(System.getenv("PORT"));
-        port(port);
-        logger.error("Current port number:" + port);
+        logger.error("Current port number");
 
         port(getHerokuAssignedPort());
 
